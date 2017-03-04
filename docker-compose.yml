@@ -2,9 +2,10 @@ version: '2'
 services:
   dashing:
     image: 'frvi/dashing'
-    volumes: 
+    volumes:
       - ./jobs:/jobs
       - ./dashboards:/dashboards
+      - ./widgets:/widgets
     ports:
       - 8080:3030
     command: "bash -c 'dashing start' "
