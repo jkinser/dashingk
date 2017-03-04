@@ -1,8 +1,21 @@
-<% content_for :title do %>My super sweet dashboard<% end %>
+<% content_for :title do %>My attempt at a dashboard<% end %>
+<script type='text/javascript'>
+ $(function() {
+   Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":2,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":1,"size_y":2},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":2,"size_y":1}]')
+ });
+ </script>
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="redis_connected_clients" data-view="Number" style="background-color: #6C3039" data-title="Redis clients"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <div data-id="redis_used_memory" data-view="Redis"  data-title="Redis memory"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
